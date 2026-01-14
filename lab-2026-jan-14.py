@@ -36,7 +36,7 @@ count_spam = spam.count("spam")
 count_spams = spam.count("spams")
 
 # clean the string: make lowercase and normalize words to spam
-spam_clean = spam.lower().replace("spams", "spam")
+spam_clean = spam.lower().replace("spams", "spam").replace("\n", " ")
 
 # count spam in the cleaned string
 count_spam_clean = spam_clean.split().count("spam")
